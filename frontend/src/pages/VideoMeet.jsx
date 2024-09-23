@@ -11,13 +11,14 @@ import StopScreenShareIcon from "@mui/icons-material/StopScreenShare";
 import ChatIcon from "@mui/icons-material/Chat";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import VideocamOffIcon from "@mui/icons-material/VideocamOff";
+import server from "../environment";
 
 var connections = {};
 
 const peerConfigConnections = {
   iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
 };
-const server_url = "http://localhost:3000";
+const server_url = server;
 function VideoMeet() {
   var socketRef = useRef();
   let socketIdRef = useRef();
